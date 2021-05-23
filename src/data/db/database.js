@@ -1,29 +1,41 @@
 import Mock from "../mock";
 
+const getAge = (dateString = '1989-02-13') => {
+  var today = new Date();
+  var birthDate = new Date(dateString);
+  var age = today.getFullYear() - birthDate.getFullYear();
+  var m = today.getMonth() - birthDate.getMonth();
+  if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) 
+  {
+      age--;
+  }
+  return age;
+};
+
 const database = {
   information: {
-    name: 'Devid Chester',
-    aboutContent: "I am a frontend web developer. I can provide clean code and pixel perfect design. I also make website more & more interactive with web animations.",
-    age: 24,
+    name: 'Victor Manuel Avello Guerrero',
+    aboutContent: "I am a fullstack web developer and project manager. I can provide clean code using the best practices in the industry.",
+    age: getAge(),
     phone: '',
-    nationality: 'American',
-    language: 'English, French',
+    nationality: 'Chilean',
+    language: 'English, Spanish',
     email: '',
-    address: '121 King Street, Melbourne, Australia',
+    address: 'San Ignacio 166, Padre Hurtado, Chile',
     freelanceStatus: 'Available',
     socialLinks: {
-      facebook: 'https://facebook.com',
-      twitter: 'https://twitter.com',
+      facebook: '',
+      twitter: '',
       pinterest: '',
       behance: '',
-      linkedin: '',
+      linkedin: 'https://www.linkedin.com/in/victor-avello-guerrero-a5292254/',
       dribbble: '',
-      github: 'https://github.com'
+      github: 'https://github.com/victoravellog'
     },
-    brandImage: '/images/brand-image.jpg',
+    brandImage: '/images/VictorAvelloFace.png',
     aboutImage: '/images/about-image.jpg',
     aboutImageLg: '/images/about-image-lg.jpg',
-    cvfile: '/files/empty.pdf'
+    cvfile: '/files/CV Víctor Avello - ENG.pdf'
   },
   services: [
     {
