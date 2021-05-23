@@ -33,10 +33,10 @@ function Blogs() {
   return (
     <Layout>
       <Helmet>
-        <title>Blogs - Chester React Personal Portfolio Template</title>
+        <title>Blog - Victor Avello Guerrero</title>
         <meta
           name="description"
-          content="Chester React Personal Portfolio Template Blogs Page"
+          content="Victor Avello Guerrero Blog page"
         />
       </Helmet>
       <div className="mi-about mi-section mi-padding-top mi-padding-bottom">
