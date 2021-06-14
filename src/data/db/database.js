@@ -33,25 +33,25 @@ const database = {
       github: 'https://github.com/victoravellog'
     },
     brandImage: '/images/VictorAvelloFace.png',
-    aboutImage: '/images/about-image.jpg',
-    aboutImageLg: '/images/about-image-lg.jpg',
+    aboutImage: '/images/VictorAvelloFace.png',
+    aboutImageLg: '/images/VictorAvelloFace.png',
     cvfile: '/files/CV Víctor Avello - ENG.pdf'
   },
   services: [
     {
-      title: "Web Design",
-      icon: 'color-pallet',
-      details: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem tenetur ratione quod."
-    },
-    {
       title: "Web Development",
       icon: 'code',
-      details: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem tenetur ratione quod."
+      details: "Senior level on PHP (Laravel), Ruby (Rails), JS (Node, JQuery, React, Angular) and hopefull to learn any other language that I feel I'm goint to entertain with."
     },
     {
-      title: "Mobile Application",
-      icon: 'mobile',
-      details: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem tenetur ratione quod."
+      title: "Project Managment",
+      icon: 'handshake',
+      details: "Project manager for over 5 years, helping different teams to explote his potential and look for the best way to accomplish any challenge that the industry put in front of us, always, as a Team."
+    },
+    {
+      title: "Agile and/or Structured",
+      icon: 'grow',
+      details: "Any work methodology or culture on IT can bring good results if we are compromissed with the goal and the process. Both Agile and Structured methodologies can apply for different project and I'm not closed to anyone."
     }
   ],
   reviews: [

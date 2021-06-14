@@ -98,9 +98,7 @@ function About() {
                   I am <span className="color-theme">{information.name}</span>
                 </h3>
                 <p>
-                  I am a frontend web developer. I can provide clean code and
-                  pixel perfect design. I also make website more & more
-                  interactive with web animations.
+                I am a fullstack web developer and project manager. I can provide clean code using the best practices in the industry.
                 </p>
                 <ul>
                   {!information.name ? null : (
@@ -133,11 +131,11 @@ function About() {
                       <b>Email</b> {information.email}
                     </li>
                   )}
-                  {!information.address ? null : (
+                  {/* {!information.address ? null : (
                     <li>
                       <b>Address</b> {information.address}
                     </li>
-                  )}
+                  )} */}
                   {!information.freelanceStatus ? null : (
                     <li>
                       <b>Freelance</b> {information.freelanceStatus}
