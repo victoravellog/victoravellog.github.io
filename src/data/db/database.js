@@ -57,26 +57,82 @@ const database = {
   reviews: [
     {
       id: 1,
-      content: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita impedit nobis tempore quaerat quibusdam, aliquid maxime tempora.",
+      content: "Victor is a person who brings a strategic look to the IT area, leading important projects of the organization, with a great capacity for listening, empathy and collaboration, essential in the adaptive challenges associated with the world of Technology.",
       author: {
-        name: 'Burdette Turner',
-        designation: 'Web Developer, Abc Company'
+        name: 'Anita Marambio Reynes',
+        designation: 'General Manager, Workmate S.A'
       }
     },
     {
       id: 2,
-      content: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita impedit nobis tempore quaerat quibusdam.",
+      content: "You are an incredible leader, I highlight your willingness to share the knowledge you have. Your technical and social skills will allow you to function in the best way and with the best results anywhere.",
       author: {
-        name: 'Susan Yost',
-        designation: 'Client'
+        name: 'Yordano Escaff',
+        designation: 'Sr Scrum Master, Banco de Chile'
       }
     },
     {
       id: 3,
-      content: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+      content: "It gave me the opportunity to be part of a great team, giving me confidence and freedom to express our opinions in each meeting horizontally, great ability to resolve conflicts and, above all, he helped me a lot to grow professionally and as a person.",
       author: {
-        name: 'Irving Feeney',
-        designation: 'Fiverr Client'
+        name: 'Héctor Cifuentes',
+        designation: 'Sr Engineer, Workmate S.A'
+      }
+    },
+    {
+      id: 4,
+      content: "It is a pleasure to work with Víctor, a good professional, always interested in continuing to advance and grow as such.",
+      author: {
+        name: 'Kevin Vergara',
+        designation: 'DevOps Engineer, TacTech SPA'
+      }
+    },
+    {
+      id: 5,
+      content: "After being in Víctor's team, I can say that he was an excellent area manager. An inspiring leader. He is always ready to empower and support his team. Generous with his knowledge, clear in his organization schemes and also extremely human, empathetic and encouraging.",
+      author: {
+        name: 'Sylvia Alvarez',
+        designation: 'Project Manager, Workmate S.A'
+      }
+    },
+    {
+      id: 6,
+      content: "Excellent professional with high capacity for conflict resolution, of great human value, with great technical experience in different fields, always in search of acquiring and applying new knowledge.",
+      author: {
+        name: 'Mario Ossandón',
+        designation: 'Tech Leader, Zenta Group'
+      }
+    },
+    {
+      id: 7,
+      content: "Victor is a comprehensive, versatile and highly competitive professional. He possesses excellent technical skills that allow him to meet the goals and objectives of each project. In terms of social skills, he has a good development of empathy and integration and belonged to work teams. He has a high degree of commitment and responsibility to the success of the projects. Highly recommended.",
+      author: {
+        name: 'Jorge Aravena',
+        designation: 'CEO, BinaryBag Technologies'
+      }
+    },
+    {
+      id: 8,
+      content: "I worked with Victor on a complex project where I could appreciate his excellent willingness to learn new skills and technologies from his peers.",
+      author: {
+        name: 'Jong Bor Lee',
+        designation: 'R&D Engineer, BinaryBag Technologies'
+      }
+    },
+    {
+      id: 9,
+      content: "Victor is a very talented professional capable of solving quickly and in a timely manner all the challenges that come his way. He noted for his outstanding professional and human qualities. He is without a doubt a contribution in any team that he integrates.",
+      author: {
+        name: 'Gonzalo Vitta',
+        designation: 'Project Manager, BinaryBag Technologies'
+      }
+    },
+    {
+      id: 10,
+      content: "Victor is committed to his work and to the company, being a very good collaborator in every way. As a developer he learns quickly and applies his own solutions without great complications, he has a good technical base that facilitates learning and adaptation to the technological needs of the moment.",
+      author: {
+        name: 'Joaquín Vera',
+        designation: 'Project coordinator, SUSESO'
       }
     }
   ],
