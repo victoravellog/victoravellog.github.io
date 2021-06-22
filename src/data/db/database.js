@@ -32,7 +32,7 @@ const database = {
       dribbble: '',
       github: 'https://github.com/victoravellog'
     },
-    brandImage: '/images/_VA-550x400.png',
+    brandImage: '/images/VictorAvelloBrand.png',
     aboutImage: '/images/VictorAvelloFace.png',
     aboutImageLg: '/images/VictorAvelloFace.png',
     cvfile: '/files/CV Víctor Avello - ENG.pdf'
@@ -587,7 +587,7 @@ const databaseESP = {
       dribbble: '',
       github: 'https://github.com/victoravellog'
     },
-    brandImage: '/images/_VA-550x400.png',
+    brandImage: '/images/VictorAvelloBrand.png',
     aboutImage: '/images/VictorAvelloFace.png',
     aboutImageLg: '/images/VictorAvelloFace.png',
     cvfile: '/files/CV Víctor Avello - ENG.pdf'
