@@ -13,16 +13,19 @@ import Resumes from "./pages/Resumes";
 
 function App() {
   const [lightMode, setLightMode] = useState(false); // Made it true if you want to load your site light mode primary
+  const [langMode, setLangMode] = useState(true);
 
-  lightMode ? document.body.classList.add('light') : document.body.classList.remove('light');
+  //lightMode ? document.body.classList.add('light') : document.body.classList.remove('light');
 
   const handleMode = () => {
-    if (!lightMode) {
+    if (langMode) {
       setLightMode(true);
-      document.body.classList.add('light')
+      setLangMode(false);
+      //document.body.classList.add('light')
     } else {
       setLightMode(false);
-      document.body.classList.remove('light')
+      setLangMode(true);
+      //document.body.classList.remove('light')
     }
   }
 
@@ -30,13 +33,13 @@ function App() {
     <BrowserRouter>
       <div className="light-mode">
         <span className="icon">
-          <Icon.Sun />
+          <Icon.Flag />
         </span>
         <button className={lightMode ? 'light-mode-switch active' : 'light-mode-switch'} onClick={() => handleMode()}></button>
       </div>
       <Switch>
         <Route path="/" exact>
-          <Home lightMode={lightMode}/>
+          <Home langENG={langMode}/>
         </Route>
         <Route path="/about" component={About} />
         <Route path="/resume" component={Resumes} />

@@ -53,13 +53,10 @@
         border-bottom: 1px solid $color-border;
 
         a {
-            height: 200px;
-            width: 200px;
-            border-radius: 1000px;
-            border: 7px solid $color-border;
-            overflow: hidden;
-            display: inline-block;
-            vertical-align: middle;
+            position: relative;
+            width: 200px; 
+            height: 115.47px;
+            margin: 57.74px 0;
         }
     }
 

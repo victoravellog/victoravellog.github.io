@@ -5,7 +5,8 @@ import Particles from "react-particles-js";
 import Layout from "../components/Layout";
 import Socialicons from "../components/Socialicons";
 
-function Home({ lightMode }) {
+function Home(props) {
+  
   const [information, setInformation] = useState("");
   const paramConfig = {
     particles: {
@@ -74,11 +75,17 @@ function Home({ lightMode }) {
       },
     },
   };
-  useEffect(() => {
-    axios.get("/api/information").then((response) => {
-      setInformation(response.data);
-    });
-  }, []);
+  useEffect(() => {  
+    if(props.langENG){
+      axios.get("/api/information").then((response) => {
+        setInformation(response.data);
+      });
+    }else{
+      axios.get("/api/informationESP").then((response) => {
+        setInformation(response.data);
+      });
+    }
+  }, [props]);
   return (
     <Layout>
       <Helmet>
@@ -91,14 +98,14 @@ function Home({ lightMode }) {
       <div className="mi-home-area mi-padding-section">
         <Particles
           className="mi-home-particle"
-          params={lightMode ? paramConfigLight : paramConfig}
+          params={paramConfig}
         />
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-10 col-12">
               <div className="mi-home-content">
                 <h1>
-                  Hi, I am{" "}
+                {props.langENG ? "Hi, I am" : "Hola!, soy"}{" "}
                   <span className="color-theme">{information.name}</span>
                 </h1>
                 <p>{information.aboutContent}</p>

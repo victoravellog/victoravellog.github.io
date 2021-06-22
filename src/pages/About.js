@@ -10,7 +10,7 @@ import Sectiontitle from "../components/Sectiontitle";
 import Service from "../components/Service";
 import Testimonial from "../components/Testimonial";
 
-function About() {
+function About(props) {
   const [toggler, setToggler] = useState(false);
   const [information, setInformation] = useState("");
   const [services, setServices] = useState([]);
