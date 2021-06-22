@@ -138,28 +138,52 @@ const database = {
   ],
   skills: [
     {
-      title: "HTML5",
-      value: 95
+      title: "Docker",
+      value: 85
     },
     {
-      title: "CSS3",
-      value: 90
-    },
+      title: "AWS",
+      value: 85
+    },    
     {
       title: "Javascript",
-      value: 70
+      value: 80
     },
     {
       title: "jQuery",
-      value: 85
+      value: 90
     },
     {
       title: "ReactJS",
       value: 80
     },
     {
-      title: "Photoshop",
-      value: 65
+      title: "PHP",
+      value: 95
+    },
+    {
+      title: "Laravel",
+      value: 95
+    },
+    {
+      title: "Group Managment",
+      value: 95
+    },
+    {
+      title: "Ruby",
+      value: 85
+    },
+    {
+      title: "Rails",
+      value: 90
+    },
+    {
+      title: "HTML5",
+      value: 95
+    },
+    {
+      title: "CSS3",
+      value: 80
     }
   ],
   portfolios: [
@@ -349,47 +373,53 @@ const database = {
     workingExperience: [
       {
         id: 1,
-        year: "2018 - Present",
-        position: "Frontend Web Developer",
-        company: "Abc Company",
-        details: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, magni mollitia, aspernatur consequatur accusamus vero eum facere exercitationem velit suscipit ipsam placeat libero. Deleniti exercitationem nostrum quasi. Molestiae, vel porro."
+        year: "2021 - Present",
+        position: "Project Manager",
+        company: "Imed S.A",
+        details: "Document and Signatures team Project Manager, responsible for Rails, NodeJS and Laravel projects."
       },
       {
         id: 2,
-        year: "2016 - 2018",
-        position: "Frontend Web Developer",
-        company: "CBA Company",
-        details: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, magni mollitia, aspernatur consequatur accusamus vero eum facere exercitationem velit suscipit ipsam placeat libero. Deleniti exercitationem nostrum quasi. Molestiae, vel porro."
+        year: "2019 - 2021",
+        position: "Deparment Chief",
+        company: "Workmate S.A",
+        details: "Responsible for the entire IT department, Development team, Help desk team on every project of the company. Laravel, NodeJS, Angular project."
       },
       {
         id: 3,
-        year: "2014 - 1016",
-        position: "UI/UX Designer",
-        company: "Example Company",
-        details: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, magni mollitia, aspernatur consequatur accusamus vero eum facere exercitationem velit suscipit ipsam placeat libero. Deleniti exercitationem nostrum quasi. Molestiae, vel porro."
+        year: "2016 - 2019",
+        position: "Project Manager",
+        company: "Workmate S.A",
+        details: "Responsible for CODELCO's Acreditation and Credentials project for the entire company. Laravel project."
+      },
+      {
+        id: 4,
+        year: "2014 - 2016",
+        position: "Software Engineer",
+        company: "Workmate S.A",
+        details: "Full-Stack software developer. Laravel projects."
+      },
+      {
+        id: 5,
+        year: "2012 - 2014",
+        position: "Software Engineer",
+        company: "BinaryBag Technologies",
+        details: "Full-Stack software developer. Rails and Kohana projects."
       }
     ],
     educationExperience: [
       {
         id: 1,
-        year: "2018 - 2019",
-        graduation: "Master of Science",
-        university: "Abc University",
-        details: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, magni mollitia, aspernatur consequatur accusamus vero eum facere exercitationem velit suscipit ipsam placeat libero. Deleniti exercitationem nostrum quasi. Molestiae, vel porro."
+        year: "2007 - 2012",
+        graduation: "Bachelor on Computer Science",
+        university: "Universidad de Santiago de Chile",
+        details: "Computer Science degree."
       },
       {
         id: 2,
-        year: "2016 - 2018",
-        graduation: "Bachelor of Science",
-        university: "Abc University",
-        details: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, magni mollitia, aspernatur consequatur accusamus vero eum facere exercitationem velit suscipit ipsam placeat libero. Deleniti exercitationem nostrum quasi. Molestiae, vel porro."
-      },
-      {
-        id: 3,
-        year: "2015 - 2016",
-        graduation: "Higher Schoold Graduation",
-        university: "Abc College",
-        details: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, magni mollitia, aspernatur consequatur accusamus vero eum facere exercitationem velit suscipit ipsam placeat libero. Deleniti exercitationem nostrum quasi. Molestiae, vel porro."
+        year: "2003 - 2006",
+        graduation: "High School Licence",
+        university: "Instituto Nacional José Miguel Carrera"
       }
     ]
   },
@@ -531,9 +561,9 @@ const database = {
     }
   ],
   contactInfo: {
-    phoneNumbers: ['+012-3456-7891', '+012-3456-7892'],
-    emailAddress: ['admin.sitename@example.com', 'info.sitename@example.com'],
-    address: "121 King Street, Melbourne, Victoria 3000, Australia"
+    phoneNumbers: ['+56-9-67228986'],
+    emailAddress: ['victoravellog@gmail.com'],
+    address: "San Ignacio 166, Padre Hurtado, Santiago, Chile"
   }
 }
 

@@ -4,6 +4,8 @@ import axios from "axios";
 import * as Icon from "react-feather";
 import Sectiontitle from "../components/Sectiontitle";
 import Layout from "../components/Layout";
+import emailjs from 'emailjs-com';
+emailjs.init("user_2qSFsCdSE7RhWFlXPzhrE");
 
 function Contact() {
   const [phoneNumbers, setPhoneNumbers] = useState([]);
@@ -34,7 +36,20 @@ function Contact() {
       setMessage("Message is required");
     } else {
       setError(false);
-      setMessage("You message has been sent!!!");
+      var templateParams = {
+        from_name: formdata.name,
+        message: formdata.message,
+        subject: formdata.subject,
+        from_email: formdata.email
+      };  
+ 
+    emailjs.send('service_k560v0t', 'template_gxv6kft', templateParams)
+        .then(function(response) {
+          console.log('SUCCESS!', response.status, response.text);
+        }, function(error) {
+          console.log('FAILED...', error);
+        });
+      setMessage("Your message has been sent!!!");
     }
   };
   const handleChange = (event) => {
@@ -177,7 +192,7 @@ function Contact() {
                     </div>
                   </div>
                 )}
-                {!phoneNumbers ? null : (
+                {/* {!phoneNumbers ? null : (
                   <div className="mi-contact-infoblock">
                     <span className="mi-contact-infoblock-icon">
                       <Icon.MapPin />
@@ -187,7 +202,7 @@ function Contact() {
                       <p>{address}</p>
                     </div>
                   </div>
-                )}
+                )} */}
               </div>
             </div>
           </div>
