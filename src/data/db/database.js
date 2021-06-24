@@ -35,13 +35,13 @@ const database = {
     brandImage: '/images/VictorAvelloBrand.png',
     aboutImage: '/images/VictorAvelloFace.png',
     aboutImageLg: '/images/VictorAvelloFace.png',
-    cvfile: '/files/CV Víctor Avello - ENG.pdf'
+    cvfile: '/files/CVVictorAvelloENG.pdf'
   },
   services: [
     {
       title: "Web Development",
       icon: 'code',
-      details: "Senior level on PHP (Laravel), Ruby (Rails), JS (Node, JQuery, React, Angular) and hopefull to learn any other language that I feel I'm goint to entertain with."
+      details: "Senior level on PHP (Laravel), Ruby (Rails), JS (Node, JQuery, React, Angular) and hopeful to learn any other language that I feel I'm going to entertain with."
     },
     {
       title: "Project Managment",
@@ -390,7 +390,7 @@ const database = {
         year: "2016 - 2019",
         position: "Project Manager",
         company: "Workmate S.A",
-        details: "Responsible for CODELCO's Acreditation and Credentials project for the entire company. Laravel project."
+        details: "Responsible for CODELCO's Accreditation and Credentials project for the entire company. Laravel project."
       },
       {
         id: 4,
@@ -570,14 +570,14 @@ const database = {
 const databaseESP = {
   information: {
     name: 'Victor Manuel Avello Guerrero',
-    aboutContent: "Soy un desarrollador web completo y director de proyectos. Puedo proporcionar código limpio utilizando las mejores prácticas de la industria.",
+    aboutContent: "Soy un desarrollador fullstack y director de proyectos. Puedo proporcionar código limpio utilizando las mejores prácticas de la industria.",
     age: getAge(),
     phone: '',
-    nationality: 'Chilean',
-    language: 'English, Spanish',
+    nationality: 'Chileno',
+    language: 'Inglés, Español',
     email: '',
     address: 'San Ignacio 166, Padre Hurtado, Chile',
-    freelanceStatus: 'Available',
+    freelanceStatus: 'Disponible',
     socialLinks: {
       facebook: '',
       twitter: '',
@@ -590,37 +590,37 @@ const databaseESP = {
     brandImage: '/images/VictorAvelloBrand.png',
     aboutImage: '/images/VictorAvelloFace.png',
     aboutImageLg: '/images/VictorAvelloFace.png',
-    cvfile: '/files/CV Víctor Avello - ENG.pdf'
+    cvfile: '/files/CVVictorAvelloESP.pdf'
   },
   services: [
     {
-      title: "Web Development",
+      title: "Desarrollo Web",
       icon: 'code',
-      details: "Senior level on PHP (Laravel), Ruby (Rails), JS (Node, JQuery, React, Angular) and hopefull to learn any other language that I feel I'm goint to entertain with."
+      details: "Nivel senior en PHP (Laravel), Ruby (Rails), JS (Node, JQuery, React, Angular) y con la esperanza de aprender cualquier otro idioma con el que sienta que me voy a entretener."
     },
     {
-      title: "Project Managment",
+      title: "Gestión de Proyectos",
       icon: 'handshake',
-      details: "Project manager for over 5 years, helping different teams to explote his potential and look for the best way to accomplish any challenge that the industry put in front of us, always, as a Team."
+      details: "Jefe de proyectos por más de 5 años, ayudando a diferentes equipos a explotar su potencial y buscar la mejor manera de cumplir con cualquier desafío que la industria nos ponga por delante, siempre, como Equipo."
     },
     {
-      title: "Agile and/or Structured",
+      title: "Agil y/o Estructurado",
       icon: 'grow',
-      details: "Any work methodology or culture on IT can bring good results if we are compromissed with the goal and the process. Both Agile and Structured methodologies can apply for different project and I'm not closed to anyone."
+      details: "Cualquier metodología de trabajo o cultura en TI puede traer buenos resultados si nos comprometemos con el objetivo y el proceso. Tanto las metodologías ágiles como las estructuradas se pueden aplicar para diferentes proyectos y no estoy cerrado a ninguna."
     }
   ],
   reviews: [
     {
       id: 1,
-      content: "Victor is a person who brings a strategic look to the IT area, leading important projects of the organization, with a great capacity for listening, empathy and collaboration, essential in the adaptive challenges associated with the world of Technology.",
+      content: "Victor es una persona que aporta una mirada estratégica al área de TI, liderando importantes proyectos de la organización, con una gran capacidad de escucha, empatía y colaboración, indispensables en los desafíos adaptativos asociados al mundo de la Tecnología.",
       author: {
         name: 'Anita Marambio Reynes',
-        designation: 'General Manager, Workmate S.A'
+        designation: 'Gerente General, Workmate S.A'
       }
     },
     {
       id: 2,
-      content: "You are an incredible leader, I highlight your willingness to share the knowledge you have. Your technical and social skills will allow you to function in the best way and with the best results anywhere.",
+      content: "Eres un líder increíble, debo reconocer que aprendí muchas cosas gracias a ti durante este tiempo y destaco tu disposición al momento de compartir los conocimientos que posees. Tus skills técnicas y sociales te permitirán desenvolverte de la mejor forma y con los mejores resultados en cualquier parte.",
       author: {
         name: 'Yordano Escaff',
         designation: 'Sr Scrum Master, Banco de Chile'
@@ -628,15 +628,15 @@ const databaseESP = {
     },
     {
       id: 3,
-      content: "It gave me the opportunity to be part of a great team, giving me confidence and freedom to express our opinions in each meeting horizontally, great ability to resolve conflicts and, above all, he helped me a lot to grow professionally and as a person.",
+      content: "Me dio la oportunidad de formar parte de un gran equipo, dando confianza y libertad de expresar nuestras opiniones en cada reunión de forma horizontal, agradezco mucho su capacidad de resolución de conflictos y por sobre todo el gran apoyo que me dio en los buenos y malos momentos, me ayudo mucho a crecer profesionalmente y como persona.",
       author: {
         name: 'Héctor Cifuentes',
-        designation: 'Sr Engineer, Workmate S.A'
+        designation: 'Backend Engineer, MACH'
       }
     },
     {
       id: 4,
-      content: "It is a pleasure to work with Víctor, a good professional, always interested in continuing to advance and grow as such.",
+      content: "Un agrado trabajar con Víctor, buen profesional, siempre interesado en seguir avanzando y creciendo como tal.",
       author: {
         name: 'Kevin Vergara',
         designation: 'DevOps Engineer, TacTech SPA'
@@ -644,15 +644,15 @@ const databaseESP = {
     },
     {
       id: 5,
-      content: "After being in Víctor's team, I can say that he was an excellent area manager. An inspiring leader. He is always ready to empower and support his team. Generous with his knowledge, clear in his organization schemes and also extremely human, empathetic and encouraging.",
+      content: "Luego de estar en el equipo de Víctor, puedo decir que fue un excelente jefe de área. Un líder inspirador. Siempre presto a potenciar y apoyar a su equipo. Generoso con sus conocimientos, claro en sus esquemas de organización y además sumamente humano, empático y alentador.",
       author: {
         name: 'Sylvia Alvarez',
-        designation: 'Project Manager, Workmate S.A'
+        designation: 'Jefe de Proyectos, Workmate S.A'
       }
     },
     {
       id: 6,
-      content: "Excellent professional with high capacity for conflict resolution, of great human value, with great technical experience in different fields, always in search of acquiring and applying new knowledge.",
+      content: "Excelente profesional con alta capacidad de resolución de conflictos, de gran valor humano, con gran experiencia técnica en distintos ámbitos, siempre en la búsqueda de adquirir y aplicar nuevos conocimiento.",
       author: {
         name: 'Mario Ossandón',
         designation: 'Tech Leader, Zenta Group'
@@ -660,7 +660,7 @@ const databaseESP = {
     },
     {
       id: 7,
-      content: "Victor is a comprehensive, versatile and highly competitive professional. He possesses excellent technical skills that allow him to meet the goals and objectives of each project. In terms of social skills, he has a good development of empathy and integration and belonged to work teams. He has a high degree of commitment and responsibility to the success of the projects. Highly recommended.",
+      content: "Victor es un profesional integral, versatil y altamente competitivo. Posee excelentes habilidades tecnicas que le permiten cumplir con las metas y objetivos de cada proyecto. En terminos de habilidades sociales, posee un buen desarrollo de la empatia y, de integracion y pertenecia a los equipos de trabajo. Tiene un alto grado de compromiso y responsabilidad con el exito de los proyectos. Muy recomendable.",
       author: {
         name: 'Jorge Aravena',
         designation: 'CEO, BinaryBag Technologies'
@@ -668,7 +668,7 @@ const databaseESP = {
     },
     {
       id: 8,
-      content: "I worked with Victor on a complex project where I could appreciate his excellent willingness to learn new skills and technologies from his peers.",
+      content: "Trabajé con Víctor en un proyecto complejo donde pude apreciar su excelente disposición a aprender nuevas destrezas y tecnologías de sus pares.",
       author: {
         name: 'Jong Bor Lee',
         designation: 'R&D Engineer, BinaryBag Technologies'
@@ -676,18 +676,18 @@ const databaseESP = {
     },
     {
       id: 9,
-      content: "Victor is a very talented professional capable of solving quickly and in a timely manner all the challenges that come his way. He noted for his outstanding professional and human qualities. He is without a doubt a contribution in any team that he integrates.",
+      content: "Victor es un profesional muy talentoso capaz de solucionar de manera rápida y oportuna todos los desafíos que se le presentan. Destacado por sus sobresalientes cualidades tanto profesionales como humanas. Es sin duda un aporte en cualquier equipo que integre.",
       author: {
         name: 'Gonzalo Vitta',
-        designation: 'Project Manager, BinaryBag Technologies'
+        designation: 'Jefe de Proyectos, BinaryBag Technologies'
       }
     },
     {
       id: 10,
-      content: "Victor is committed to his work and to the company, being a very good collaborator in every way. As a developer he learns quickly and applies his own solutions without great complications, he has a good technical base that facilitates learning and adaptation to the technological needs of the moment.",
+      content: "Víctor se compromete con su trabajo y con la empresa, siendo un muy buen colaborador en todo sentido. Como desarrollador aprende rápido y aplica soluciones propias sin grandes complicaciones, tiene una buena base técnica que le facilita el aprendizaje y adaptación a las necesidades tecnológicas del momento.",
       author: {
         name: 'Joaquín Vera',
-        designation: 'Project coordinator, SUSESO'
+        designation: 'Coordinador de proyectos, SUSESO'
       }
     }
   ],
@@ -721,7 +721,7 @@ const databaseESP = {
       value: 95
     },
     {
-      title: "Group Managment",
+      title: "Manejo de grupos",
       value: 95
     },
     {
@@ -929,51 +929,51 @@ const databaseESP = {
       {
         id: 1,
         year: "2021 - Present",
-        position: "Project Manager",
+        position: "Jefe de proyectos",
         company: "Imed S.A",
-        details: "Document and Signatures team Project Manager, responsible for Rails, NodeJS and Laravel projects."
+        details: "Jefe de proyecto del equipo de Documentación y Firmas, responsable de proyectos Rails, NodeJS y Laravel."
       },
       {
         id: 2,
         year: "2019 - 2021",
-        position: "Deparment Chief",
+        position: "Jefe de área",
         company: "Workmate S.A",
-        details: "Responsible for the entire IT department, Development team, Help desk team on every project of the company. Laravel, NodeJS, Angular project."
+        details: "Responsable de todo el departamento de TI, equipo de desarrollo, equipo de mesa de ayuda en cada proyecto de la empresa. Laravel, NodeJS, proyecto Angular."
       },
       {
         id: 3,
         year: "2016 - 2019",
-        position: "Project Manager",
+        position: "Jefe de proyectos",
         company: "Workmate S.A",
-        details: "Responsible for CODELCO's Acreditation and Credentials project for the entire company. Laravel project."
+        details: "Responsable del proyecto de Acreditación y Credenciales CODELCO para toda la empresa. Proyecto Laravel."
       },
       {
         id: 4,
         year: "2014 - 2016",
-        position: "Software Engineer",
+        position: "Analista desarrollador de software",
         company: "Workmate S.A",
-        details: "Full-Stack software developer. Laravel projects."
+        details: "Desarrollador Full-Stack. Proyectos Laravel."
       },
       {
         id: 5,
         year: "2012 - 2014",
-        position: "Software Engineer",
+        position: "Analista desarrollador de software",
         company: "BinaryBag Technologies",
-        details: "Full-Stack software developer. Rails and Kohana projects."
+        details: "Desarrollador Full-Stack. Proyectos Rails and Kohana."
       }
     ],
     educationExperience: [
       {
         id: 1,
         year: "2007 - 2012",
-        graduation: "Bachelor on Computer Science",
+        graduation: "Analista en Computación Científica",
         university: "Universidad de Santiago de Chile",
-        details: "Computer Science degree."
+        details: "Licenciado en Ciencias de la Computación."
       },
       {
         id: 2,
         year: "2003 - 2006",
-        graduation: "High School Licence",
+        graduation: "Licencia Enseñanza Media",
         university: "Instituto Nacional José Miguel Carrera"
       }
     ]
@@ -1138,8 +1138,18 @@ Mock.onGet("/api/services").reply(config => {
   return [200, response];
 });
 
+Mock.onGet("/api/servicesESP").reply(config => {
+  const response = databaseESP.services;
+  return [200, response];
+});
+
 Mock.onGet("/api/reviews").reply(config => {
   const response = database.reviews;
+  return [200, response];
+});
+
+Mock.onGet("/api/reviewsESP").reply(config => {
+  const response = databaseESP.reviews;
   return [200, response];
 });
 
@@ -1148,8 +1158,18 @@ Mock.onGet("/api/skills").reply(config => {
   return [200, response];
 });
 
+Mock.onGet("/api/skillsESP").reply(config => {
+  const response = databaseESP.skills;
+  return [200, response];
+});
+
 Mock.onGet("/api/portfolios").reply(config => {
   const response = database.portfolios;
+  return [200, response];
+});
+
+Mock.onGet("/api/portfoliosESP").reply(config => {
+  const response = databaseESP.portfolios;
   return [200, response];
 });
 
@@ -1158,12 +1178,27 @@ Mock.onGet("/api/experience").reply(config => {
   return [200, response];
 });
 
+Mock.onGet("/api/experienceESP").reply(config => {
+  const response = databaseESP.experience;
+  return [200, response];
+});
+
 Mock.onGet("/api/blog").reply(config => {
   const response = database.blogs;
   return [200, response];
 });
 
+Mock.onGet("/api/blogESP").reply(config => {
+  const response = databaseESP.blogs;
+  return [200, response];
+});
+
 Mock.onGet("/api/contactinfo").reply(config => {
   const response = database.contactInfo;
+  return [200, response];
+});
+
+Mock.onGet("/api/contactinfoESP").reply(config => {
+  const response = databaseESP.contactInfo;
   return [200, response];
 });

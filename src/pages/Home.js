@@ -87,7 +87,7 @@ function Home(props) {
     }
   }, [props]);
   return (
-    <Layout>
+    <Layout langENG={props.langENG}>
       <Helmet>
         <title>Home - Victor Avello Guerrero</title>
         <meta

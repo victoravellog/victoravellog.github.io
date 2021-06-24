@@ -45,21 +45,34 @@ function About(props) {
   };
 
   useEffect(() => {
-    axios.get("/api/information").then((response) => {
-      setInformation(response.data);
-    });
-    axios.get("/api/services").then((response) => {
-      setServices(response.data);
-    });
-    axios.get("/api/reviews").then((response) => {
-      setReviews(response.data);
-    });
-  }, []);
+    if(props.langENG){
+      axios.get("/api/information").then((response) => {
+        setInformation(response.data);
+      });
+      axios.get("/api/services").then((response) => {
+        setServices(response.data);
+      });
+      axios.get("/api/reviews").then((response) => {
+        setReviews(response.data);
+      });
+    }else{
+      axios.get("/api/informationESP").then((response) => {
+        setInformation(response.data);
+      });
+      axios.get("/api/servicesESP").then((response) => {
+        setServices(response.data);
+      });
+      axios.get("/api/reviewsESP").then((response) => {
+        setReviews(response.data);
+      });
+    }
+    
+  }, [props]);
 
   return (
-    <Layout>
+    <Layout langENG={props.langENG}>
       <Helmet>
-        <title>About - Victor Avello Guerrero</title>
+        <title>{props.langENG ? "About" : "Acerda de mí"} - Victor Avello Guerrero</title>
         <meta
           name="description"
           content="Victor Avello Guerrero About page"
@@ -67,7 +80,7 @@ function About(props) {
       </Helmet>
       <div className="mi-about-area mi-section mi-padding-top">
         <div className="container">
-          <Sectiontitle title="About Me" />
+          <Sectiontitle title={props.langENG ? "About me" : "Acerda de mí"} />
           <div className="row">
             <div className="col-lg-6">
               <div className="mi-about-image">
@@ -95,35 +108,35 @@ function About(props) {
             <div className="col-lg-6">
               <div className="mi-about-content">
                 <h3>
-                  I am <span className="color-theme">{information.name}</span>
+                {props.langENG ? "I am" : "Soy"} <span className="color-theme">{information.name}</span>
                 </h3>
                 <p>
-                I am a fullstack web developer and project manager. I can provide clean code using the best practices in the industry.
+                {props.langENG ? "I am a fullstack web developer and project manager. I can provide clean code using the best practices in the industry." : information.aboutContent}
                 </p>
                 <ul>
                   {!information.name ? null : (
                     <li>
-                      <b>Full Name</b> {information.name}
+                      <b>{props.langENG ? "Full Name" : "Nombre"}</b> {information.name}
                     </li>
                   )}
                   {!information.age ? null : (
                     <li>
-                      <b>Age</b> {information.age} Years
+                      <b>{props.langENG ? "Age" : "Edad"}</b> {information.age} Years
                     </li>
                   )}
                   {!information.phone ? null : (
                     <li>
-                      <b>Phone</b> {information.phone}
+                      <b>{props.langENG ? "Phone" : "Teléfono"}</b> {information.phone}
                     </li>
                   )}
                   {!information.nationality ? null : (
                     <li>
-                      <b>Nationality</b> {information.nationality}
+                      <b>{props.langENG ? "Nationality" : "Nacionalidad"}</b> {information.nationality}
                     </li>
                   )}
                   {!information.language ? null : (
                     <li>
-                      <b>Languages</b> {information.language}
+                      <b>{props.langENG ? "Languages" : "Lenguajes"}</b> {information.language}
                     </li>
                   )}
                   {!information.email ? null : (
@@ -143,7 +156,7 @@ function About(props) {
                   )}
                 </ul>
                 <a href={information.cvfile} className="mi-button">
-                  Download CV
+                  {props.langENG ? "Download CV" : "Descargar CV"}
                 </a>
               </div>
             </div>
@@ -152,7 +165,7 @@ function About(props) {
       </div>
       <div className="mi-service-area mi-section mi-padding-top">
         <div className="container">
-          <Sectiontitle title="Services" />
+          <Sectiontitle title={props.langENG ? "Services" : "Servicios"} />
           <div className="mi-service-wrapper">
             <div className="row mt-30-reverse">
               {services.map((service) => (

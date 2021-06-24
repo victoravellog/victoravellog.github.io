@@ -7,7 +7,7 @@ import Layout from "../components/Layout";
 import emailjs from 'emailjs-com';
 emailjs.init("user_2qSFsCdSE7RhWFlXPzhrE");
 
-function Contact() {
+function Contact(props) {
   const [phoneNumbers, setPhoneNumbers] = useState([]);
   const [emailAddress, setEmailAddress] = useState([]);
   const [address, setAddress] = useState([]);
@@ -74,17 +74,26 @@ function Contact() {
   };
 
   useEffect(() => {
-    axios.get("/api/contactinfo").then((response) => {
-      setPhoneNumbers(response.data.phoneNumbers);
-      setEmailAddress(response.data.emailAddress);
-      setAddress(response.data.address);
-    });
-  }, []);
+    if(props.langENG){
+      axios.get("/api/contactinfo").then((response) => {
+        setPhoneNumbers(response.data.phoneNumbers);
+        setEmailAddress(response.data.emailAddress);
+        setAddress(response.data.address);
+      });
+    }else{
+      axios.get("/api/contactinfoESP").then((response) => {
+        setPhoneNumbers(response.data.phoneNumbers);
+        setEmailAddress(response.data.emailAddress);
+        setAddress(response.data.address);
+      });
+    }
+    
+  }, [props]);
 
   return (
-    <Layout>
+    <Layout langENG={props.langENG}>
       <Helmet>
-        <title>Contact - Victor Avello Guerrero</title>
+        <title>{props.langENG ? "Contact" : "Contacto"} - Victor Avello Guerrero</title>
         <meta
           name="description"
           content="Victor Avello Guerrero Contact page"
@@ -92,18 +101,18 @@ function Contact() {
       </Helmet>
       <div className="mi-contact-area mi-section mi-padding-top mi-padding-bottom">
         <div className="container">
-          <Sectiontitle title="Contact Me" />
+          <Sectiontitle title={props.langENG ? "Contact me" : "Contáctame"} />
           <div className="row">
             <div className="col-lg-6">
               <div className="mi-contact-formwrapper">
-                <h4>Get In Touch</h4>
+                <h4>{props.langENG ? "Get in Touch" : "Ponte en contacto"}</h4>
                 <form
                   action="#"
                   className="mi-form mi-contact-form"
                   onSubmit={submitHandler}
                 >
                   <div className="mi-form-field">
-                    <label htmlFor="contact-form-name">Enter your name*</label>
+                    <label htmlFor="contact-form-name">{props.langENG ? "Enter your name" : "Ingresa tu nombre"}*</label>
                     <input
                       onChange={handleChange}
                       type="text"
@@ -114,7 +123,7 @@ function Contact() {
                   </div>
                   <div className="mi-form-field">
                     <label htmlFor="contact-form-email">
-                      Enter your email*
+                      {props.langENG ? "Enter your email" : "Ingresa tu email"}*
                     </label>
                     <input
                       onChange={handleChange}
@@ -126,7 +135,7 @@ function Contact() {
                   </div>
                   <div className="mi-form-field">
                     <label htmlFor="contact-form-subject">
-                      Enter your subject*
+                      {props.langENG ? "Enter your subject" : "Ingresa tu asunto"}*
                     </label>
                     <input
                       onChange={handleChange}
@@ -138,7 +147,7 @@ function Contact() {
                   </div>
                   <div className="mi-form-field">
                     <label htmlFor="contact-form-message">
-                      Enter your Message*
+                      {props.langENG ? "Enter your Message" : "Ingresa tu mensaje"}*
                     </label>
                     <textarea
                       onChange={handleChange}
@@ -151,7 +160,7 @@ function Contact() {
                   </div>
                   <div className="mi-form-field">
                     <button className="mi-button" type="submit">
-                      Send Mail
+                      {props.langENG ? "Send mail" : "Enviar mail"}
                     </button>
                   </div>
                 </form>
@@ -166,7 +175,7 @@ function Contact() {
                       <Icon.Phone />
                     </span>
                     <div className="mi-contact-infoblock-content">
-                      <h6>Phone</h6>
+                      <h6>{props.langENG ? "Phone" : "Teléfono"}</h6>
                       {phoneNumbers.map((phoneNumber) => (
                         <p key={phoneNumber}>
                           <a href={numberFormatter(phoneNumber)}>
