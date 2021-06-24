@@ -31,7 +31,7 @@ function App() {
   }
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <div className="light-mode">
         <span className="icon">
           <FlagIcon code={langMode ? "gb" : "cl"} />
