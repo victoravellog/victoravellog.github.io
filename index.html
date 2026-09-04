@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Victor Avello</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --black: #1a1a1a;
+      --white: #fafafa;
+      --yellow: #ffe14c;
+      --blue: #4169e1;
+      --border: 3px solid var(--black);
+    }
+
+    body {
+      font-family: 'Courier New', monospace;
+      background: var(--white);
+      color: var(--black);
+      min-height: 100vh;
+      padding: 2rem;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: -2px;
+      margin-bottom: 0.5rem;
+    }
+
+    .tagline {
+      font-size: 1.1rem;
+      background: var(--yellow);
+      display: inline-block;
+      padding: 0.25rem 0.5rem;
+      border: var(--border);
+      margin-bottom: 2rem;
+    }
+
+    .section {
+      border: var(--border);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      background: var(--white);
+    }
+
+    .section:hover {
+      transform: translate(-4px, -4px);
+      box-shadow: 4px 4px 0 var(--black);
+    }
+
+    h2 {
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--black);
+    }
+
+    p {
+      margin-bottom: 0.75rem;
+    }
+
+    .stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .tag {
+      background: var(--black);
+      color: var(--white);
+      padding: 0.25rem 0.75rem;
+      font-size: 0.85rem;
+      font-weight: bold;
+    }
+
+    .tag.highlight {
+      background: var(--blue);
+    }
+
+    a {
+      color: var(--black);
+      text-decoration: none;
+      border-bottom: 2px solid var(--black);
+      font-weight: bold;
+    }
+
+    a:hover {
+      background: var(--yellow);
+    }
+
+    .links {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .project {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .project-tech {
+      font-size: 0.85rem;
+      color: #666;
+    }
+
+    footer {
+      margin-top: 3rem;
+      font-size: 0.85rem;
+      color: #666;
+    }
+
+    @media (max-width: 500px) {
+      h1 { font-size: 2rem; }
+      body { padding: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Victor Avello</h1>
+      <div class="tagline">Software Engineer · 12+ years</div>
+    </header>
+
+    <section class="section">
+      <h2>Now</h2>
+      <p>Building <a href="https://www.ibat-alliance.org/" target="_blank">IBAT</a> at <a href="https://www.unep-wcmc.org/" target="_blank">UNEP-WCMC</a> — biodiversity risk data for conservation and business.</p>
+      <p>Based in UK, from Chile.</p>
+    </section>
+
+    <section class="section">
+      <h2>Stack</h2>
+      <div class="stack">
+        <span class="tag">Ruby</span>
+        <span class="tag">Rails</span>
+        <span class="tag">PostgreSQL</span>
+        <span class="tag highlight">PostGIS</span>
+        <span class="tag highlight">GIS</span>
+        <span class="tag">Hotwire</span>
+        <span class="tag">Docker</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Projects</h2>
+      <div class="project">
+        <a href="https://github.com/victoravellog/futpred" target="_blank">FutPred</a>
+        <span class="project-tech">Rails 8 · PostgreSQL · Sidekiq</span>
+      </div>
+      <p style="margin-top: 0.5rem; font-size: 0.95rem;">Football predictions app — play with friends, compete for the best predictions.</p>
+    </section>
+
+    <section class="section">
+      <h2>Links</h2>
+      <div class="links">
+        <a href="https://github.com/victoravellog" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/victor-avello-guerrero-a5292254/" target="_blank">LinkedIn</a>
+      </div>
+    </section>
+
+    <footer>
+      Built with HTML & CSS. No frameworks needed.
+    </footer>
+  </div>
+</body>
+</html>
