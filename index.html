@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Victor Avello</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
   <style>
     * {
       margin: 0;
@@ -12,20 +13,30 @@
     }
 
     :root {
-      --black: #1a1a1a;
-      --white: #fafafa;
+      --bg: #fafafa;
+      --text: #1a1a1a;
       --yellow: #ffe14c;
       --blue: #4169e1;
-      --border: 3px solid var(--black);
+      --gray: #666;
+      --border: 3px solid var(--text);
+    }
+
+    [data-theme="dark"] {
+      --bg: #1a1a1a;
+      --text: #fafafa;
+      --yellow: #ffe14c;
+      --blue: #6b8cff;
+      --gray: #999;
     }
 
     body {
       font-family: 'Courier New', monospace;
-      background: var(--white);
-      color: var(--black);
+      background: var(--bg);
+      color: var(--text);
       min-height: 100vh;
       padding: 2rem;
       line-height: 1.6;
+      transition: background 0.1s, color 0.1s;
     }
 
     .container {
@@ -33,12 +44,63 @@
       margin: 0 auto;
     }
 
-    h1 {
-      font-size: 3rem;
+    /* Theme toggle */
+    .theme-toggle {
+      position: fixed;
+      top: 1.5rem;
+      right: 1.5rem;
+      background: var(--text);
+      color: var(--bg);
+      border: none;
+      padding: 0.5rem 1rem;
+      font-family: inherit;
+      font-size: 0.85rem;
+      font-weight: bold;
+      cursor: pointer;
+      text-transform: uppercase;
+    }
+
+    .theme-toggle:hover {
+      background: var(--yellow);
+      color: var(--text);
+    }
+
+    /* Header with photo */
+    header {
+      display: flex;
+      gap: 1.5rem;
+      align-items: flex-start;
+      margin-bottom: 2rem;
+    }
+
+    .avatar {
+      width: 100px;
+      height: 100px;
+      border: var(--border);
+      filter: grayscale(100%) contrast(1.1);
+      flex-shrink: 0;
+    }
+
+    .avatar:hover {
+      filter: none;
+    }
+
+    .header-text h1 {
+      font-size: 2.5rem;
       font-weight: 900;
       text-transform: uppercase;
       letter-spacing: -2px;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.25rem;
+      min-height: 1.2em;
+    }
+
+    .cursor {
+      animation: blink 0.7s infinite;
+    }
+
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      51%, 100% { opacity: 0; }
     }
 
     .tagline {
@@ -47,19 +109,20 @@
       display: inline-block;
       padding: 0.25rem 0.5rem;
       border: var(--border);
-      margin-bottom: 2rem;
+      color: #1a1a1a;
     }
 
     .section {
       border: var(--border);
       padding: 1.5rem;
       margin-bottom: 1.5rem;
-      background: var(--white);
+      background: var(--bg);
+      transition: transform 0.1s, box-shadow 0.1s;
     }
 
     .section:hover {
       transform: translate(-4px, -4px);
-      box-shadow: 4px 4px 0 var(--black);
+      box-shadow: 4px 4px 0 var(--text);
     }
 
     h2 {
@@ -68,7 +131,7 @@
       letter-spacing: 2px;
       margin-bottom: 1rem;
       padding-bottom: 0.5rem;
-      border-bottom: 2px solid var(--black);
+      border-bottom: 2px solid var(--text);
     }
 
     p {
@@ -82,8 +145,8 @@
     }
 
     .tag {
-      background: var(--black);
-      color: var(--white);
+      background: var(--text);
+      color: var(--bg);
       padding: 0.25rem 0.75rem;
       font-size: 0.85rem;
       font-weight: bold;
@@ -91,17 +154,19 @@
 
     .tag.highlight {
       background: var(--blue);
+      color: #fff;
     }
 
     a {
-      color: var(--black);
+      color: var(--text);
       text-decoration: none;
-      border-bottom: 2px solid var(--black);
+      border-bottom: 2px solid var(--text);
       font-weight: bold;
     }
 
     a:hover {
       background: var(--yellow);
+      color: #1a1a1a;
     }
 
     .links {
@@ -120,32 +185,78 @@
 
     .project-tech {
       font-size: 0.85rem;
-      color: #666;
+      color: var(--gray);
+    }
+
+    /* Previously section */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .timeline-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.25rem;
+    }
+
+    .timeline-role {
+      font-size: 0.85rem;
+      color: var(--gray);
     }
 
     footer {
       margin-top: 3rem;
       font-size: 0.85rem;
-      color: #666;
+      color: var(--gray);
     }
 
     @media (max-width: 500px) {
-      h1 { font-size: 2rem; }
+      .header-text h1 { font-size: 1.75rem; }
       body { padding: 1rem; }
+      header { flex-direction: column; align-items: center; text-align: center; }
+      .avatar { width: 120px; height: 120px; }
+      .theme-toggle { top: 0.75rem; right: 0.75rem; padding: 0.4rem 0.75rem; }
     }
   </style>
 </head>
 <body>
+  <button class="theme-toggle" onclick="toggleTheme()">◐</button>
+
   <div class="container">
     <header>
-      <h1>Victor Avello</h1>
-      <div class="tagline">Software Engineer · 12+ years</div>
+      <img src="https://avatars.githubusercontent.com/u/77787948?v=4" alt="Victor Avello" class="avatar">
+      <div class="header-text">
+        <h1 id="typed-name"></h1>
+        <div class="tagline">Software Engineer · 12+ years</div>
+      </div>
     </header>
 
     <section class="section">
       <h2>Now</h2>
       <p>Building <a href="https://www.ibat-alliance.org/" target="_blank">IBAT</a> at <a href="https://www.unep-wcmc.org/" target="_blank">UNEP-WCMC</a> — biodiversity risk data for conservation and business.</p>
       <p>Based in UK, from Chile.</p>
+    </section>
+
+    <section class="section">
+      <h2>Previously</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <a href="https://www.agendapro.com" target="_blank">AgendaPro</a>
+          <span class="timeline-role">Senior Backend Developer</span>
+        </div>
+        <div class="timeline-item">
+          <a href="https://www.imed.cl" target="_blank">IMED</a>
+          <span class="timeline-role">Project Manager</span>
+        </div>
+        <div class="timeline-item">
+          <span>Workmate</span>
+          <span class="timeline-role">Department Leader</span>
+        </div>
+      </div>
     </section>
 
     <section class="section">
@@ -182,5 +293,41 @@
       Built with HTML & CSS. No frameworks needed.
     </footer>
   </div>
+
+  <script>
+    // Theme toggle
+    function toggleTheme() {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    }
+
+    // Load saved theme
+    const saved = localStorage.getItem('theme');
+    if (saved) {
+      document.documentElement.setAttribute('data-theme', saved);
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+
+    // Typewriter effect
+    const name = "Victor Avello";
+    const el = document.getElementById('typed-name');
+    let i = 0;
+
+    function type() {
+      if (i <= name.length) {
+        el.innerHTML = name.slice(0, i) + '<span class="cursor">_</span>';
+        i++;
+        setTimeout(type, 120);
+      } else {
+        el.innerHTML = name;
+      }
+    }
+
+    type();
+  </script>
 </body>
 </html>
