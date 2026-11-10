@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Victor Avello</title>
+  <meta name="description" content="Victor Avello — Fullstack engineer specialising in geospatial and scientific data. Building IBAT at UNEP-WCMC.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>▪</text></svg>">
   <style>
     * {
@@ -40,7 +41,7 @@
     }
 
     .container {
-      max-width: 700px;
+      max-width: 720px;
       margin: 0 auto;
     }
 
@@ -58,6 +59,7 @@
       font-weight: bold;
       cursor: pointer;
       text-transform: uppercase;
+      z-index: 10;
     }
 
     .theme-toggle:hover {
@@ -79,7 +81,7 @@
       border: var(--border);
       filter: grayscale(100%) contrast(1.1);
       flex-shrink: 0;
-      margin-top: auto;
+      margin-top: 0.4rem; /* line the photo's top edge up with the title caps */
     }
 
     .avatar:hover {
@@ -114,6 +116,13 @@
       color: #1a1a1a;
     }
 
+    .location {
+      display: block;
+      margin-top: 0.6rem;
+      font-size: 0.9rem;
+      color: var(--gray);
+    }
+
     .section {
       border: var(--border);
       padding: 1.5rem;
@@ -125,6 +134,17 @@
     .section:hover {
       transform: translate(-4px, -4px);
       box-shadow: 4px 4px 0 var(--text);
+    }
+
+    /* The IBAT section is the headline — mark it with the accent. */
+    .section.feature {
+      border-color: var(--blue);
+    }
+    .section.feature:hover {
+      box-shadow: 4px 4px 0 var(--blue);
+    }
+    .section.feature h2 {
+      border-bottom-color: var(--blue);
     }
 
     h2 {
@@ -139,11 +159,59 @@
     p {
       margin-bottom: 0.75rem;
     }
+    p:last-child { margin-bottom: 0; }
+
+    .lead { font-weight: bold; }
+
+    ul.facts {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      margin-top: 0.5rem;
+    }
+    ul.facts li {
+      padding-left: 1.25rem;
+      position: relative;
+    }
+    ul.facts li::before {
+      content: "▪";
+      position: absolute;
+      left: 0;
+      color: var(--blue);
+    }
+
+    .metrics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin: 1rem 0 0.25rem;
+    }
+    .metric .num {
+      font-size: 1.6rem;
+      font-weight: 900;
+      line-height: 1;
+    }
+    .metric .label {
+      font-size: 0.8rem;
+      color: var(--gray);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
 
     .stack {
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
+    }
+    .stack-group { margin-bottom: 1rem; }
+    .stack-group:last-child { margin-bottom: 0; }
+    .stack-group .group-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--gray);
+      margin-bottom: 0.5rem;
     }
 
     .tag {
@@ -190,11 +258,17 @@
       color: var(--gray);
     }
 
-    /* Previously section */
+    .project-desc {
+      margin-top: 0.4rem;
+      font-size: 0.95rem;
+    }
+    .project + .project { margin-top: 1.25rem; }
+
+    /* Experience / Education timeline */
     .timeline {
       display: flex;
       flex-direction: column;
-      gap: 0.75rem;
+      gap: 0.9rem;
     }
 
     .timeline-item {
@@ -202,12 +276,24 @@
       justify-content: space-between;
       align-items: baseline;
       flex-wrap: wrap;
-      gap: 0.25rem;
+      gap: 0.25rem 1rem;
     }
 
+    .timeline-main { font-weight: bold; }
     .timeline-role {
       font-size: 0.85rem;
       color: var(--gray);
+      font-weight: normal;
+    }
+    .timeline-dates {
+      font-size: 0.8rem;
+      color: var(--gray);
+      white-space: nowrap;
+    }
+    .edu-detail {
+      font-size: 0.85rem;
+      color: var(--gray);
+      margin-top: 0.15rem;
     }
 
     footer {
@@ -222,6 +308,11 @@
       header { flex-direction: column; align-items: center; text-align: center; }
       .avatar { width: 100px; height: auto; margin-top: 0; }
       .theme-toggle { top: 0.75rem; right: 0.75rem; padding: 0.4rem 0.75rem; }
+      .location { text-align: center; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, .cursor { animation: none !important; transition: none !important; }
     }
   </style>
 </head>
@@ -233,71 +324,138 @@
       <img src="https://avatars.githubusercontent.com/u/77787948?v=4" alt="Victor Avello" class="avatar">
       <div class="header-text">
         <h1 id="typed-name"></h1>
-        <div class="tagline">Software Engineer · 12+ years</div>
+        <div class="tagline">Fullstack Engineer · Geospatial &amp; scientific data</div>
+        <span class="location">12+ years · Based in UK, from Chile</span>
       </div>
     </header>
 
-    <section class="section">
+    <section class="section feature">
       <h2>Now</h2>
-      <p>Building <a href="https://www.ibat-alliance.org/" target="_blank">IBAT</a> at <a href="https://www.unep-wcmc.org/" target="_blank">UNEP-WCMC</a> — biodiversity risk data for conservation and business.</p>
-      <p>Based in UK, from Chile.</p>
-    </section>
-
-    <section class="section">
-      <h2>Previously</h2>
-      <div class="timeline">
-        <div class="timeline-item">
-          <a href="https://www.agendapro.com" target="_blank">AgendaPro</a>
-          <span class="timeline-role">Senior Backend Developer</span>
-        </div>
-        <div class="timeline-item">
-          <a href="https://www.imed.cl" target="_blank">IMED</a>
-          <span class="timeline-role">Project Manager</span>
-        </div>
-        <div class="timeline-item">
-          <a href="https://www.workmate.cl/" target="_blank">Workmate</a>
-          <span class="timeline-role">Department Leader</span>
-        </div>
+      <p class="lead">Building <a href="https://www.ibat-alliance.org/" target="_blank" rel="noopener">IBAT</a> at <a href="https://www.unep-wcmc.org/" target="_blank" rel="noopener">UNEP-WCMC</a> — the global tool for biodiversity risk screening.</p>
+      <p>I work across the whole stack here — from design and application code to infrastructure.</p>
+      <div class="metrics">
+        <div class="metric"><div class="num">~400</div><div class="label">organisations</div></div>
+        <div class="metric"><div class="num">~2,000</div><div class="label">users</div></div>
+        <div class="metric"><div class="num">Global</div><div class="label">datasets</div></div>
       </div>
+      <ul class="facts">
+        <li>Used by governments, banks and consultancies screening biodiversity risk and meeting environmental regulation.</li>
+        <li>Serves global conservation datasets — the World Database of Protected and Conserved Areas, Key Biodiversity Areas and the full IUCN Red List — as both spatial and tabular data.</li>
+        <li>Built extensible, verifiable ingestion pipelines for those datasets on a single Rails monolith (PostGIS raster + vector), with no complex infrastructure.</li>
+        <li>Stack: Rails · Hotwire · PostgreSQL / PostGIS · GeoServer · TileServer · Puppeteer · Docker · Kamal · GitHub Actions.</li>
+      </ul>
     </section>
 
     <section class="section">
       <h2>Stack</h2>
-      <div class="stack">
-        <span class="tag">Ruby</span>
-        <span class="tag">Rails</span>
-        <span class="tag">PostgreSQL</span>
-        <span class="tag highlight">PostGIS</span>
-        <span class="tag highlight">GIS</span>
-        <span class="tag">Hotwire</span>
-        <span class="tag">Docker</span>
+      <div class="stack-group">
+        <div class="group-label">Geospatial &amp; data</div>
+        <div class="stack">
+          <span class="tag highlight">PostGIS</span>
+          <span class="tag highlight">GIS</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">GeoServer</span>
+          <span class="tag">TileServer</span>
+          <span class="tag">RGeo</span>
+        </div>
+      </div>
+      <div class="stack-group">
+        <div class="group-label">Backend</div>
+        <div class="stack">
+          <span class="tag">Ruby</span>
+          <span class="tag">Rails</span>
+          <span class="tag">Hanami</span>
+        </div>
+      </div>
+      <div class="stack-group">
+        <div class="group-label">Frontend</div>
+        <div class="stack">
+          <span class="tag">Hotwire</span>
+          <span class="tag">Stimulus</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">TypeScript</span>
+        </div>
+      </div>
+      <div class="stack-group">
+        <div class="group-label">Infra</div>
+        <div class="stack">
+          <span class="tag">Docker</span>
+          <span class="tag">Kamal</span>
+          <span class="tag">GitHub Actions</span>
+        </div>
       </div>
     </section>
 
     <section class="section">
       <h2>Projects</h2>
       <div class="project">
-        <a href="https://github.com/victoravellog/futpred" target="_blank">FutPred</a>
+        <a href="https://github.com/victoravellog/sport-venue-near-me" target="_blank" rel="noopener">Sport Venue Near Me</a>
+        <span class="project-tech">Hanami 3 · PostGIS · Leaflet</span>
+      </div>
+      <p class="project-desc">Finds sports venues near a point, polygon or line, with buffered distance queries run in PostGIS (GIST-indexed, SRID 4326). Versioned JSON API with OpenAPI, RSpec suite, Dockerised, CI on GitHub Actions.</p>
+
+      <div class="project">
+        <a href="https://github.com/victoravellog/futpred" target="_blank" rel="noopener">FutPred</a>
         <span class="project-tech">Rails 8 · PostgreSQL · Sidekiq</span>
       </div>
-      <p style="margin-top: 0.5rem; margin-bottom: 1.25rem; font-size: 0.95rem;">Football predictions app — play with friends, compete for the best predictions.</p>
+      <p class="project-desc">Football predictions app — play with friends and compete for the best predictions.</p>
+
       <div class="project">
-        <a href="https://github.com/victoravellog/cacacounter" target="_blank">Cacacounter</a>
+        <a href="https://github.com/victoravellog/cacacounter" target="_blank" rel="noopener">Cacacounter</a>
         <span class="project-tech">Rails 8 · SQLite · Hotwire</span>
       </div>
-      <p style="margin-top: 0.5rem; font-size: 0.95rem;">Diaper tracking app for newborns — stock alerts, usage stats, dark mode.</p>
+      <p class="project-desc">Diaper tracking app for newborns — stock alerts, usage stats, dark mode.</p>
+    </section>
+
+    <section class="section">
+      <h2>Experience</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <span class="timeline-main"><a href="https://www.unep-wcmc.org/" target="_blank" rel="noopener">UNEP-WCMC</a> <span class="timeline-role">IBAT Fullstack Engineer</span></span>
+          <span class="timeline-dates">Aug 2023 — present</span>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-main"><a href="https://www.agendapro.com" target="_blank" rel="noopener">AgendaPro</a> <span class="timeline-role">Senior Backend Developer</span></span>
+          <span class="timeline-dates">Nov 2021 — Jan 2023</span>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-main"><a href="https://www.imed.cl" target="_blank" rel="noopener">IMED</a> <span class="timeline-role">Project Manager</span></span>
+          <span class="timeline-dates">Apr 2021 — Nov 2021</span>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-main"><a href="https://www.workmate.cl/" target="_blank" rel="noopener">Workmate</a> <span class="timeline-role">Department Leader</span></span>
+          <span class="timeline-dates">Sep 2014 — Jan 2021</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Education</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <span class="timeline-main">Master in Software Architecture &amp; Development</span>
+          <span class="timeline-dates">Sep 2022 — Jul 2023</span>
+        </div>
+        <div class="edu-detail">La Salle — Barcelona, Spain</div>
+        <div class="timeline-item" style="margin-top:0.4rem;">
+          <span class="timeline-main">BSc Computer Science · Scientific Computing Analyst</span>
+          <span class="timeline-dates">Mar 2007 — Jan 2013</span>
+        </div>
+        <div class="edu-detail">Universidad de Santiago de Chile</div>
+      </div>
     </section>
 
     <section class="section">
       <h2>Links</h2>
       <div class="links">
-        <a href="https://github.com/victoravellog" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/victor-avello-guerrero-a5292254/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/victoravellog" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/victor-avello-guerrero-a5292254/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:victoravellog@gmail.com">Email</a>
       </div>
     </section>
 
     <footer>
-      Built with HTML & CSS. No frameworks needed.
+      Built with HTML &amp; CSS. No frameworks needed.
     </footer>
   </div>
 
@@ -308,20 +466,23 @@
       const current = html.getAttribute('data-theme');
       const next = current === 'dark' ? 'light' : 'dark';
       html.setAttribute('data-theme', next);
-      localStorage.setItem('theme', next);
+      try { localStorage.setItem('theme', next); } catch (e) {}
     }
 
     // Load saved theme
-    const saved = localStorage.getItem('theme');
-    if (saved) {
-      document.documentElement.setAttribute('data-theme', saved);
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      document.documentElement.setAttribute('data-theme', 'dark');
-    }
+    try {
+      const saved = localStorage.getItem('theme');
+      if (saved) {
+        document.documentElement.setAttribute('data-theme', saved);
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    } catch (e) {}
 
     // Typewriter effect
     const name = "Victor Avello";
     const el = document.getElementById('typed-name');
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     let i = 0;
 
     function type() {
@@ -334,7 +495,7 @@
       }
     }
 
-    type();
+    if (reduceMotion) { el.textContent = name; } else { type(); }
   </script>
 </body>
 </html>
